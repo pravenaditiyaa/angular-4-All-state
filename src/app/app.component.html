@@ -1,0 +1,23 @@
+ <div>
+  Entity details:
+  <br>
+  <span> <input placeholder="enter entity name" [(ngModel)]="jasonObj.name"/></span>
+  <span> <input placeholder="enter entity desc" [(ngModel)]="jasonObj.description"/></span>
+</div>
+
+<br>
+<br> List of Attributes:
+<br>
+
+<div>
+  <div *ngFor="let x of jasonObj.attributes; let i=index;">
+   <input  type="text" placeholder="enter attribute" [(ngModel)]="x.name"/>
+   <input  type="text" placeholder="enter attribute" [(ngModel)]="x.description"/>
+</div>
+  <button (click)='addAttr()'>add attribute</button>
+  
+
+  <br> 
+</div> 
+
+{{jasonObj | json}}
